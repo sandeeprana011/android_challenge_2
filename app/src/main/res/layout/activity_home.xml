@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.bhiwalakhil.myapplication.HomeActivity">
+
+    <RelativeLayout
+        android:id="@+id/relWrapButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:text="491454843"
+            android:id="@+id/inputString"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/username"
+            android:padding="8dp" />
+
+        <Button
+            android:textColor="@color/white"
+            android:background="@drawable/button"
+            android:id="@+id/buttonProcess"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/inputString"
+            android:onClick="findString"
+            android:text="Find String" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relWrapProcessing"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/relWrapButton"
+        android:visibility="visible"
+        >
+
+        <TextView
+            android:layout_marginBottom="10dp"
+            android:id="@+id/labelCharacters"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Currently we are searching for String's of size atleast 5 char long."
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/colorPrimaryDark" />
+
+        <ProgressBar
+            android:layout_below="@+id/answer"
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            />
+
+        <TextView
+            android:id="@+id/labelCurrentStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/labelCharacters"
+            android:padding="7dp"
+            android:text="String in Process"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/darkGrey" />
+
+        <TextView
+
+            android:id="@+id/currentStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/labelCurrentStatus"
+            android:layout_marginLeft="5dp"
+            android:padding="10dp"
+            android:text="ababa"
+            android:textColor="@color/colorPrimaryDark"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <TextView
+            android:id="@+id/answer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/currentStatus"
+            android:padding="7dp"
+            android:text="String Found:"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:visibility="gone" />
+    </RelativeLayout>
+</RelativeLayout>
