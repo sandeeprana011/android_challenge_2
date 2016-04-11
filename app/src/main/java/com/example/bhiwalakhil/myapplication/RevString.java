@@ -6,18 +6,6 @@ package com.example.bhiwalakhil.myapplication;
 public class RevString {
    char[] letters = "acdegilmnoprstuw".toCharArray();
 
-   public String revString(long hashNumber) {
-
-//	  int count = (int) (hashNumber % 37); //count index of char in letters
-	  long divident = hashNumber;
-	  String stringKey = "";
-	  while (divident > 37) {
-		 divident = divident / 37;
-		 stringKey = stringKey.concat(String.valueOf(letters[((int) (divident % 37))]));
-	  }
-	  return stringKey;
-//	  return String.valueOf(hash("menum"));
-   }
 
 
    public long hash(String s) {
@@ -35,7 +23,7 @@ public class RevString {
    }
 
    public String nextUpString(String s) {
-	  char[] letters = "acdegilmnoprstuw".toCharArray();
+//	  char[] letters = "acdegilmnoprstuw".toCharArray();
 	  int length = s.length();
 	  char c = s.charAt(length - 1);
 
