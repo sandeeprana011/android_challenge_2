@@ -4,14 +4,14 @@
         <shape>
             <corners android:radius="7dp" />
             <solid android:color="#ffffff" />
-            <stroke android:color="@color/colorPrimary"/>
+            <stroke android:width="2dp" android:color="@color/colorPrimary"/>
         </shape>
     </item>
     <item android:state_focused="false">
         <shape>
             <corners android:radius="7dp" />
             <solid android:color="#a5ffffff" />
-            <stroke android:color="@color/colorPrimary"/>
+            <stroke android:width="2dp" android:color="@color/colorPrimary"/>
         </shape>
     </item>
 </selector>
